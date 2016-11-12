@@ -3,9 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"urlshortener"
+	"URL-shortener"
 	"os"
-	
 )
 
 func main() {
@@ -16,7 +15,7 @@ func main() {
 		return
 	}
 
-	uri, err := goisgd.Shorten(flag.Arg(0))
+	uri, err := goisgd.Prune(flag.Arg(0))
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(-1)

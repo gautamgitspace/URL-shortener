@@ -8,7 +8,7 @@ import (
 )
 
 
-func Shorten(uri string) (string, error) {
+func Prune(uri string) (string, error) {
 	u := "http://is.gd/api.php?longurl=" + url.QueryEscape(uri)
 
 	response, err := http.Get(u)
